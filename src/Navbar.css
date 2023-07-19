@@ -1,0 +1,21 @@
+/* src/Navbar.css */
+nav {
+  background-color: #00BFFF;
+  padding: 15px;
+}
+
+.navbar-ul {
+  list-style-type: none;
+  margin: 10;
+  padding: 10;
+}
+
+.navbar-li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.navbar-a {
+  color: white;
+  text-decoration: none;
+}
