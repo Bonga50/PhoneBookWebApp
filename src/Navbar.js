@@ -10,10 +10,10 @@ const Navbar = () => {
           <a className="navbar-a" href="/">Phone Book</a>
         </li>
         <li className="navbar-li">
-          <a className="navbar-a" href="/newEntry">New Entry</a>
+          <a className="navbar-a" href="./newEntry">New Entry</a>
         </li>
         <li className="navbar-li">
-          <a className="navbar-a" href="/newPhoneBook">New Phone Book</a>
+          <a className="navbar-a" href="./newPhoneBook">New Phone Book</a>
         </li>
       </ul>
     </nav>

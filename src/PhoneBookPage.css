@@ -1,0 +1,28 @@
+.Dropdown > div {
+    margin-top: 25px;
+    padding: auto;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .FilterInput {
+    margin-bottom: 15px;
+    height: 45px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .FilterInput input {
+    height: 10px;
+  }
+
+  .ListBox {
+    margin-bottom: 15px;
+    height: 45px;
+    padding: auto;
+    display: flex;
+    justify-content: center;
+  }

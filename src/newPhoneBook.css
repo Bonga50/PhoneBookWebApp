@@ -1,0 +1,15 @@
+.Contents > div{
+    margin-bottom: 15px;
+    height: 45px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Text{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

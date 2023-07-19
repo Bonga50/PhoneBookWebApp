@@ -1,0 +1,36 @@
+.Contents > div{
+    margin-bottom: 15px;
+    height: 45px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Text{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textBoxes {
+    margin-bottom: 15px;
+    height: 45px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+  }
+
+.textBoxes input{
+    height: 10px;
+}
+
+.btnContents{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .button {
+    margin: 30px;
+  }

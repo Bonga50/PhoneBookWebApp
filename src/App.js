@@ -4,8 +4,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import PhoneBookPage from './PhoneBookPage';
-import newEntry from './newEntry';
-import newPhoneBook from './newPhoneBook';
+import NewEntry from './NewEntry';
+import NewPhoneBook from './NewPhoneBook';
 
 function App() {
   return (
@@ -14,8 +14,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<PhoneBookPage />} />
-          <Route path="/newEntry" element={<newEntry />} />
-          <Route path="/newPhoneBook" element={<newPhoneBook />} />
+          <Route path="/NewEntry" element={<NewEntry />} />
+          <Route path="/NewPhoneBook" element={<NewPhoneBook />} />
         </Routes>
       </div>
     </Router>
@@ -23,6 +23,7 @@ function App() {
 }
 
 export default App;
+
 // function App() {
 //   return (
 //     <div className="App">
