@@ -13,3 +13,17 @@
     justify-content: center;
     align-items: center;
 }
+
+.textBoxes {
+    margin-bottom: 15px;
+    height: 45px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+  }
+
+.textBoxes input{
+    height: 10px;
+}
+
+

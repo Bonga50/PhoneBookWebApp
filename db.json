@@ -1,0 +1,92 @@
+{
+  "phoneBooks": [
+    {
+      "id": 1,
+      "name": "My Phone Book"
+    },
+    {
+      "name": "General",
+      "id": 2
+    },
+    {
+      "name": "Something New",
+      "id": 3
+    },
+    {
+      "name": "PhoneBook",
+      "id": 4
+    },
+    {
+      "name": "Death Note",
+      "id": 5
+    }
+  ],
+  "Contacts": [
+    {
+      "id": 1,
+      "phoneBookname": "My Phone Book",
+      "userName": "Cayde 6",
+      "PhoneNumber": "555-555-5555"
+    },
+    {
+      "phoneBookname": "General",
+      "userName": "Bob",
+      "PhoneNumber": "000-999-8888",
+      "id": 2
+    },
+    {
+      "phoneBookname": "General",
+      "userName": "Benson",
+      "PhoneNumber": "000-444-8859",
+      "id": 3
+    },
+    {
+      "phoneBookname": "Death Note",
+      "userName": "Margit the fell",
+      "PhoneNumber": "000-000-4444",
+      "id": 4
+    },
+    {
+      "phoneBookname": "General",
+      "userName": "Ranni",
+      "PhoneNumber": "555-666-7777",
+      "id": 6
+    },
+    {
+      "phoneBookname": "My Phone Book",
+      "userName": "Mike Wazowski",
+      "PhoneNumber": "778-877-8889",
+      "id": 7
+    },
+    {
+      "phoneBookname": "My Phone Book",
+      "userName": "Radahn",
+      "PhoneNumber": "773-877-8565",
+      "id": 8
+    },
+    {
+      "phoneBookname": "My Phone Book",
+      "userName": "bob",
+      "PhoneNumber": "335-444-3948",
+      "id": 9
+    },
+    {
+      "phoneBookname": "My Phone Book",
+      "userName": "Frodo",
+      "PhoneNumber": "555-555-5555",
+      "id": 10
+    },
+    {
+      "phoneBookname": "My Phone Book",
+      "userName": "Heisenberg",
+      "PhoneNumber": "035-444-3948",
+      "id": 11
+    },
+    {
+      "phoneBookname": "My Phone Book",
+      "userName": "Jesse Pinkman",
+      "PhoneNumber": "035-445-3948",
+      "id": 12
+    }
+  ]
+}

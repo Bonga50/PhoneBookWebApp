@@ -1,17 +1,27 @@
 // src/Dropdown.js
-import React, { useState } from 'react';
-import { BsChevronDown } from 'react-icons/bs';
+import React, { useState, useEffect } from 'react';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
+import PhoneBookService from './PhoneBookService';
 
-const options = ['one', 'two', 'three','qhuahfbjnewjnadkjnwkdjn'];
-const defaultOption = options[0];
+const phoneBookService = new PhoneBookService('http://localhost:3000');
 
-const DropdownComponent = () => {
-  const [selectedOption, setSelectedOption] = useState(defaultOption);
+const DropdownComponent = ({ onSelectedOptionChange }) => {
+  const [options, setOptions] = useState([]);
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  useEffect(() => {
+    phoneBookService.getPhoneBooks().then(phoneBooks => {
+      // Extract the names of the phone books and put them in an array
+      const phoneBookNames = phoneBooks.map(phoneBook => phoneBook.name);
+      setOptions(phoneBookNames);
+      setSelectedOption(phoneBookNames[0]);
+    });
+  }, []);
 
   const handleDropdownChange = (option) => {
-    setSelectedOption(option);
+    setSelectedOption(option.value);
+    onSelectedOptionChange(option.value);
   };
 
   return (
@@ -27,6 +37,8 @@ const DropdownComponent = () => {
 };
 
 export default DropdownComponent;
+
+
 
 // // src/Dropdown.js
 // import React, { useState } from 'react';

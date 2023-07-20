@@ -1,26 +1,46 @@
 // src/PhoneBookPage.js
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Dropdown from './Dropdown';
 import './PhoneBookPage.css';
+import ApiService from './PhoneBookService.js';
 
+const apiService = new ApiService('http://localhost:3000');
 
 const PhoneBookPage = () => {
   const [filterText, setFilterText] = useState('');
+  const [contacts, setContacts] = useState([]);
+  const [selectedPhoneBook, setSelectedPhoneBook] = useState(null);
+
+  useEffect(() => {
+    async function fetchData() {
+      const phoneBooks = await apiService.getPhoneBooks();
+      if (phoneBooks.length > 0) {
+        setSelectedPhoneBook(phoneBooks[0].name);
+      }
+    }
+    fetchData();
+  }, []);
+  
+
+  useEffect(() => {
+    async function fetchData() {
+      const data = await apiService.getContacts(selectedPhoneBook);
+      setContacts(data);
+    }
+    fetchData();
+  }, [selectedPhoneBook]);
+  
 
   const handleFilterChange = (event) => {
     setFilterText(event.target.value);
   };
 
-  // Example data for the table
-  const data = [
-    { name: 'John', phone: '123-456-7890' },
-    { name: 'Jane', phone: '234-567-8901' },
-    { name: 'Bob', phone: '345-678-9012' },
-  ];
+
 
   return (
     <div className="Dropdown">
-      <Dropdown />
+      
+      <Dropdown onSelectedOptionChange={setSelectedPhoneBook}/>
       <div className="FilterInput">
       <input
       className='FilterInput'
@@ -39,10 +59,10 @@ const PhoneBookPage = () => {
           </tr>
         </thead>
         <tbody>
-          {data.map((item) => (
+          {contacts.map((item) => (
             <tr key={item.name}>
-              <td>{item.name}</td>
-              <td>{item.phone}</td>
+              <td>{item.userName}</td>
+              <td>{item.PhoneNumber}</td>
             </tr>
           ))}
         </tbody>
