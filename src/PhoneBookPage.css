@@ -25,6 +25,7 @@
     padding: auto;
     display: flex;
     justify-content: center;
+    min-height: 200px;
   }
 
   table td {

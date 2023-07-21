@@ -14,7 +14,7 @@ const PhoneBookPage = () => {
   useEffect(() => {
     async function fetchData() {
       const phoneBooks = await apiService.getPhoneBooks();
-      if (phoneBooks.length > 0) {
+      if (phoneBooks.length > 0 ||  !filterText) {
         setSelectedPhoneBook(phoneBooks[0].name);
       }
     }
@@ -25,10 +25,15 @@ const PhoneBookPage = () => {
   useEffect(() => {
     async function fetchData() {
       const data = await apiService.getContacts(selectedPhoneBook);
-      setContacts(data);
+      if (!filterText) {
+        setContacts(data);
+      } else {
+        const filteredData = await apiService.filterByName(data,filterText);
+        setContacts(filteredData);
+      }
     }
     fetchData();
-  }, [selectedPhoneBook]);
+  }, [selectedPhoneBook, filterText]);
   
 
   const handleFilterChange = (event) => {

@@ -80,6 +80,15 @@ class PhoneBookService {
     const phoneNumberPattern = /^(?!.*[^-\d])\d{3}-\d{3}-\d{4}$/;
     return phoneNumberPattern.test(phoneNumber);
   }
+  //method to filter the contacts by name using chars 
+  async filterByName(data,filterValue) {
+    try {    
+        return data.filter(item => item.userName.toLowerCase().includes(filterValue.toLowerCase()));
+        } catch (error) {
+          console.log(error);
+        } 
+  }
+  
 
   
 }
