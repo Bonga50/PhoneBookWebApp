@@ -2,6 +2,43 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Phone Book App
+
+This is a simple phone book app built with React and using a JSON server as a backend.
+
+## Prerequisites
+
+Before running the app, make sure you have the following installed on your system:
+
+- Node.js
+- npm
+
+## Installation
+
+1. Clone this repository to your local machine.
+2. Navigate to the root directory of the repository in your terminal.
+3. Run `npm install` to install all dependencies.
+4. Visual Studio Code or any IDE that can run React.
+
+## Running the app
+
+1. Start the JSON server by running `npx json-server --watch db.json` in your terminal.
+2. In a separate terminal window, navigate to the root directory of the repository and run `npm start` to start the app and make sure u run the application on a different port from the one the server is running on e.g. use `http://localhost:3001` to run the app.
+3. Open your web browser and go to `http://localhost:3001` to view the app.
+
+## Usage
+
+The app allows you to create and manage phone books and their entries. You can create new phone books, add entries to existing phone books, and view all entries in a phone book.
+
+To create a new phone book, click on the "New Phone Book" button and enter a name for the phone book. To add an entry to a phone book, click on the "New Entry" button, select a phone book from the dropdown, and enter the name and phone number of the entry.
+
+To view all entries in a phone book, select a phone book from the dropdown on the main page. You can also filter the entries by typing in the filter text box.
+
+## License
+
+This project is licensed under the MIT License.
+
+
 ## Available Scripts
 
 In the project directory, you can run:
