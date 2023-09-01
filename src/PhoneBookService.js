@@ -77,7 +77,7 @@ class PhoneBookService {
 
   //method to check the format of a phone number
   isValidPhoneNumber(phoneNumber) {
-    const phoneNumberPattern = /^\d{10}$/;
+    const phoneNumberPattern = /^\d{3}-\d{3}-\d{4}$/;
     return phoneNumberPattern.test(phoneNumber);
   }
   //method to filter the contacts by name using chars 
