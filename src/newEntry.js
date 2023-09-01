@@ -38,7 +38,7 @@ const NewEntry = () => {
   }, []);
   
   const handleSave = async () => {
-    if (!name || !phone || !apiService.isValidPhoneNumber(phone) || await apiService.phoneNumberExists(phone)) {
+    if (!name || !phone ||  !apiService.isValidPhoneNumber(phone) || await apiService.phoneNumberExists(phone)) {
       setError(true);
       setTimeout(() => setError(false), 3000);
       return;
