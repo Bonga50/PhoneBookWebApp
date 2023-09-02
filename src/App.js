@@ -4,8 +4,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import PhoneBookPage from './PhoneBookPage';
-import NewEntry from './NewEntry';
-import NewPhoneBook from './NewPhoneBook';
+import NewEntry from './newEntry';
+import NewPhoneBook from './newPhoneBook';
 
 function App() {
   return (
